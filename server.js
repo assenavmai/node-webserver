@@ -54,6 +54,13 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	// render templates with the view engine
+	res.render('projects.hbs', {
+		pageTitle: 'Projects Page'
+	});
+});
+
 app.get('/bad', (req, res) => {
 	res.send({
 		errorMsg: 'Unable to handle request'
